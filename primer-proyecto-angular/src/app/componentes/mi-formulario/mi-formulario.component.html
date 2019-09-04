@@ -1,24 +1,27 @@
 
 
-<h1>Mi formulario</h1>
+<h1 class="titulo">Mi formulario</h1>
+
+<div class="container"> 
+        <input type="text" placeholder="Ingrese el nombre" id="nombre" name="nombre"><br><br>
+        <input type="text" placeholder="Ingrese el apellido" id="apellido" name="apellido"><br><br>
+        <button (click)="CargarDatos()">Cargar Datos</button>
+
+</div>
 
 <app-pueblo [ciudad]="ciudad"
         [pais]="pais"
         (PasameElPueblo)="showPueblo($event)"></app-pueblo><br><br>
 
-        <button (click)="mostrarArray()">Arreglo</button>
-
-        <table id="miTabla">
+        <table>
                 <tr>
                         <th>
-                                Nombre del pueblo
+                        Datos de la persona
                         </th>
-
                 </tr>
                 <tr *ngFor="let item of arreglo">
-                        <td>{{item.nombre}}</td>
+                        <td>{{item}}</td>
                 </tr>
-
         </table>
 
 

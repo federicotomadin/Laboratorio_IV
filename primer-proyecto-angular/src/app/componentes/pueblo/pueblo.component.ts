@@ -8,12 +8,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PuebloComponent implements OnInit {
 
 
-public persona = {
-   nombre: 'federico',
+  @Input() persona = {
+  nombre: 'federico',
    apellido: 'tomadin'
  };
 
- public nombre: string;
+
   // tslint:disable-next-line: member-ordering
   @Input() ciudad: string;
   // tslint:disable-next-line: no-input-rename
@@ -26,20 +26,15 @@ public persona = {
 
  constructor() {
 
-  this.ciudad = 'Reconquista';
-  this.nacionReal = 'Argentina';
-
-  this.nombre = 'Pueblo';
-
-  this.persona.nombre = 'Federico';
-  this.persona.apellido = 'Tomadin';
+  // this.persona.nombre = 'Federico';
+  // this.persona.apellido = 'Tomadin';
   // this.nombre = 'nombre del pueblo';
 }
 
   ngOnInit() {  }
 
 lanzar(event: any) {
-this.PasameElPueblo.emit({nombre: this.nombre});
+this.PasameElPueblo.emit({ciudad: this.ciudad, pais: this.nacionReal});
 }
 
 

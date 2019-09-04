@@ -8,23 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mi-formulario.component.css']
 })
 export class MiFormularioComponent implements OnInit {
-  public ciudad = 'Milano';
+  public  ciudad: String;
     public pais = 'Italia';
   
     public arreglo: string[] = new Array();
 
     showPueblo(event: any): void {
-       this.arreglo.push(event.nombre)
-
-       alert('se cargo' + event.nombre + 'en el array');
-
+       this.arreglo.push(event.ciudad, " - ", event.pais)
     }
 
-    mostrarArray(): void {
+  CargarDatos(){
+    this.ciudad = $("#nombre").text()
+    this.pais = $("#apellido").text()
+  }
 
-
-
-    }
 
 
 constructor() {

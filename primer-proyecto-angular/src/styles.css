@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.container{
+    position: absolute;
+   
+    left: 50%;
+}
+
+.titulo{
+    position: relative;
+    left: 48%;
+
+}
+.tituloGeneral
+{
+    position: relative;
+    left: 46%;
+}
