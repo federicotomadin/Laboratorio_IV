@@ -10,11 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class MiFormularioComponent implements OnInit {
   public ciudad = 'Milano';
     public pais = 'Italia';
+  
+    public arreglo: string[] = new Array();
 
-    public arreglo: any[];
-    showPueblo(event): void {
-       this.arreglo.push(event.nombre);
+    showPueblo(event: any): void {
+       this.arreglo.push(event.nombre)
+
        alert('se cargo' + event.nombre + 'en el array');
+
+    }
+
+    mostrarArray(): void {
+
 
 
     }

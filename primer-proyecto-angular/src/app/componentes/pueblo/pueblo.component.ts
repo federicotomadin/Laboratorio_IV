@@ -29,7 +29,7 @@ public persona = {
   this.ciudad = 'Reconquista';
   this.nacionReal = 'Argentina';
 
-  this.nombre = 'nombre del pueblo';
+  this.nombre = 'Pueblo';
 
   this.persona.nombre = 'Federico';
   this.persona.apellido = 'Tomadin';
@@ -38,8 +38,8 @@ public persona = {
 
   ngOnInit() {  }
 
-lanzar(event) {
-this.PasameElPueblo.emit({nombre: this.persona.nombre});
+lanzar(event: any) {
+this.PasameElPueblo.emit({nombre: this.nombre});
 }
 
 

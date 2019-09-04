@@ -4,5 +4,27 @@
 
 <app-pueblo [ciudad]="ciudad"
         [pais]="pais"
-        (PasameElPueblo)="showPueblo($event)"></app-pueblo>
+        (PasameElPueblo)="showPueblo($event)"></app-pueblo><br><br>
+
+        <button (click)="mostrarArray()">Arreglo</button>
+
+        <table id="miTabla">
+                <tr>
+                        <th>
+                                Nombre del pueblo
+                        </th>
+
+                </tr>
+                <tr *ngFor="let item of arreglo">
+                        <td>{{item.nombre}}</td>
+                </tr>
+
+        </table>
+
+
+
+
+
+
+
 
