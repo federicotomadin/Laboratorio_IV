@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 .container{
     position: absolute;
-   
+
     left: 50%;
 }
 
@@ -14,4 +14,21 @@
 {
     position: relative;
     left: 46%;
+}
+
+.cargarFormulario
+{
+  position: absolute;
+  left: 50%;
+  top: 65%
+}
+
+.tabla {
+  text-align: center;
+  top: 80%
+}
+
+.table {
+  text-align: center;
+  top: 80%
 }

@@ -1,5 +1,5 @@
+import { Persona } from './../../clases/Persona';
 import { Component, OnInit } from '@angular/core';
-// import { PuebloComponent } from '../pueblo/pueblo.component';
 
 
 @Component({
@@ -8,21 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mi-formulario.component.css']
 })
 export class MiFormularioComponent implements OnInit {
-  public  ciudad: String;
-    public pais = 'Italia';
-  
-    public arreglo: string[] = new Array();
+
+
+  public  nombre: string;
+    public apellido: string;
+
+    public arreglo: Persona[] = new Array();
 
     showPueblo(event: any): void {
-       this.arreglo.push(event.ciudad, " - ", event.pais)
+       this.arreglo.push(new Persona(event.nombre, event.apellido, event.sueldo, event.licencia, event.edad, event.sexo));
+       console.log(this.arreglo);
     }
-
-  CargarDatos(){
-    this.ciudad = $("#nombre").text()
-    this.pais = $("#apellido").text()
-  }
-
-
 
 constructor() {
 

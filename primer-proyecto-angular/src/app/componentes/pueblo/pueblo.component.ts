@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Persona } from './../../clases/Persona';
 
 @Component({
   selector: 'app-pueblo',
@@ -8,16 +9,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PuebloComponent implements OnInit {
 
 
-  @Input() persona = {
-  nombre: 'federico',
-   apellido: 'tomadin'
- };
+  @Input() persona: Persona;
 
-
-  // tslint:disable-next-line: member-ordering
-  @Input() ciudad: string;
-  // tslint:disable-next-line: no-input-rename
-  @Input('pais') nacionReal: string;
+  @Input() nombre: string;
+  @Input() apellido: string;
+  @Input() sueldo: string;
+  @Input() licencia: string;
+  @Input() edad: string;
+  @Input() sexo: string;
 
   // Usamos el decorador Output
   @Output() PasameElPueblo = new EventEmitter();
@@ -26,15 +25,12 @@ export class PuebloComponent implements OnInit {
 
  constructor() {
 
-  // this.persona.nombre = 'Federico';
-  // this.persona.apellido = 'Tomadin';
-  // this.nombre = 'nombre del pueblo';
 }
 
   ngOnInit() {  }
 
 lanzar(event: any) {
-this.PasameElPueblo.emit({ciudad: this.ciudad, pais: this.nacionReal});
+this.PasameElPueblo.emit({persona: this.persona});
 }
 
 

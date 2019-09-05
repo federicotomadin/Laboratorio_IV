@@ -2,27 +2,39 @@
 
 <h1 class="titulo">Mi formulario</h1>
 
-<div class="container"> 
-        <input type="text" placeholder="Ingrese el nombre" id="nombre" name="nombre"><br><br>
-        <input type="text" placeholder="Ingrese el apellido" id="apellido" name="apellido"><br><br>
-        <button (click)="CargarDatos()">Cargar Datos</button>
-
+<div class="container">
+        <input type="text" [(ngModel)]= "nombre" placeholder="Ingrese el nombre" id="nombre" name="nombre"><br><br>
+        <input type="text" [(ngModel)]= "apellido" placeholder="Ingrese el apellido" id="apellido" name="apellido"><br><br>
+        <input type="text" [(ngModel)]= "sueldo" placeholder="Ingrese el sueldo" id="sueldo" name="sueldo"><br><br>
+        <select name="licencia" id="licencia" [(ngModel)]= "licencia">
+          <option selected value="true">si</option>
+          <option value="false">no</option>
+        </select><br><br>
+        <input type="text" [(ngModel)]= "edad" placeholder="Ingrese el edad" id="edad" name="edad"><br><br>
+        <select name="sexo" id="sexo" [(ngModel)]= "sexo">
+          <option value="M">M</option>
+          <option value="F">F</option>
+          <option value="O">F</option>
+        </select><br><br>
 </div>
 
-<app-pueblo [ciudad]="ciudad"
-        [pais]="pais"
+<app-pueblo [nombre]="nombre"
+        [apellido]="apellido"
+        [sueldo]="apellido"
+        [licencia]="licencia"
+        [edad]="edad"
+        [sexo]="sexo"
         (PasameElPueblo)="showPueblo($event)"></app-pueblo><br><br>
 
-        <table>
-                <tr>
-                        <th>
-                        Datos de la persona
-                        </th>
-                </tr>
+        <div class="tabla">
+        <table class="table">
                 <tr *ngFor="let item of arreglo">
-                        <td>{{item}}</td>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.nombre}}</td>
                 </tr>
         </table>
+      </div>
 
 
 
