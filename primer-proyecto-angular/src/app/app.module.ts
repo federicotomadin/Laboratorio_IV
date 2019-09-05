@@ -15,14 +15,14 @@ import { environment } from 'src/environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MiFormularioComponent } from './componentes/mi-formulario/mi-formulario.component';
-import { PuebloComponent } from './componentes/pueblo/pueblo.component';
+import { HijoComponent } from './componentes/hijo/hijo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MiFormularioComponent,
-    PuebloComponent
+    HijoComponent
   ],
   imports: [
     BrowserModule,

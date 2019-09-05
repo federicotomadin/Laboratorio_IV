@@ -9,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiFormularioComponent implements OnInit {
 
+public PersonaObjeto: Persona
 
-  public  nombre: string;
-    public apellido: string;
 
     public arreglo: Persona[] = new Array();
 
     showPueblo(event: any): void {
-       this.arreglo.push(new Persona(event.nombre, event.apellido, event.sueldo, event.licencia, event.edad, event.sexo));
+      this.PersonaObjeto = new Persona("","","","","","")
+       this.arreglo.push(event.PersonaObjeto);
        console.log(this.arreglo);
     }
 
