@@ -1,34 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-.container{
-    position: absolute;
 
+.container {
+    position: absolute;
     left: 50%;
 }
 
-.titulo{
+.titulo {
     position: relative;
     left: 48%;
-
 }
-.tituloGeneral
-{
+
+.tituloGeneral {
     position: relative;
     left: 46%;
 }
 
-.cargarFormulario
-{
-  position: absolute;
-  left: 50%;
-  top: 65%
+.cargarFormulario {
+    position: absolute;
+    left: 50%;
+    top: 65%;
 }
 
 .tabla {
-  text-align: center;
-  top: 80%
+    text-align: center;
+    top: 90%;
 }
 
 .table {
-  text-align: center;
-  top: 80%
+    text-align: center;
+    top: 80%;
+}
+
+td {
+    text-align: center;
+    top: 90%;
 }

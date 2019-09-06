@@ -16,13 +16,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MiFormularioComponent } from './componentes/mi-formulario/mi-formulario.component';
 import { HijoComponent } from './componentes/hijo/hijo.component';
+import { FileComponent } from './Componentes/file/file.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MiFormularioComponent,
-    HijoComponent
+    HijoComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,

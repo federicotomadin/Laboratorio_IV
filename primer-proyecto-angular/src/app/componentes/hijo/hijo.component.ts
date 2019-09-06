@@ -8,10 +8,7 @@ import { Persona } from './../../clases/Persona';
 })
 export class HijoComponent implements OnInit {
 
-  
   @Input() PersonaObjeto: Persona;
-
-  // Usamos el decorador Output
   @Output() PasameElPueblo = new EventEmitter();
 
   constructor() { }
