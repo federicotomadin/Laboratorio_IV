@@ -18,20 +18,18 @@
 .cargarFormulario {
     position: absolute;
     left: 50%;
-    top: 65%;
+    top: 57%;
 }
 
 .tabla {
+    position: absolute;
     text-align: center;
-    top: 90%;
+    top: 62%;
+    left: 25%
 }
 
-.table {
-    text-align: center;
-    top: 80%;
-}
-
-td {
-    text-align: center;
-    top: 90%;
-}
+ /* .table {
+    position: absolute;
+     text-align: center; 
+    top: %;
+}  */

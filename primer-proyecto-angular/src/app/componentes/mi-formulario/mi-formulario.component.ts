@@ -22,7 +22,7 @@ Persona: Persona = {
   fecha: new Date()
 };
 
-    public arreglo: Persona[] = new Array();
+  public arreglo: Persona[] = new Array();
 
     showPueblo(event: any): void {
       this.arreglo.push(event.PersonaObjeto);

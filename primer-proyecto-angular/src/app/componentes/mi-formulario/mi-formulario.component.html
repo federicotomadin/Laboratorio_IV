@@ -17,7 +17,6 @@
           <option value=3>O</option>
         </select><br><br>
     <input type="date" [(ngModel)]="Persona.fecha" placeholder="Ingrese la fecha" id="fecha" name="fecha"><br><br>
-
 </div>
 
 <app-hijo [PersonaObjeto]="Persona" (PasameElPueblo)="showPueblo($event)"></app-hijo><br><br>
@@ -25,13 +24,11 @@
 <div class="tabla">
     <table class="table">
         <tr *ngFor="let item of arreglo">
-            <td>{{item.nombre}}</td>
-            <td>{{item.apellido}}</td>
-            <td>{{item.sueldo}}</td>
-            <td>{{item.licencia}}</td>
-            <td>{{item.edad}}</td>
-            <td>{{item.sexo}}</td>
-            <td>{{item.fecha}}</td>
+           <app-file [item]=item></app-file>
         </tr>
     </table>
 </div>
+
+
+
+
