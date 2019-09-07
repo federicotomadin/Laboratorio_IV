@@ -1,5 +1,5 @@
 import { Persona, Sexo } from './../../clases/Persona';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { getLocaleDateTimeFormat } from '@angular/common';
 
 
@@ -22,10 +22,13 @@ Persona: Persona = {
   fecha: new Date()
 };
 
-  public arreglo: Persona[] = new Array();
+  @Input() arreglo: Persona[] = new Array();
+  public mostrar:boolean;
 
     showPueblo(event: any): void {
       this.arreglo.push(event.PersonaObjeto);
+      this.mostrar = true
+
       console.log(this.arreglo);
     }
 

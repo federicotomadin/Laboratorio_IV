@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Persona, Sexo } from './../../clases/Persona';
 
 @Component({
@@ -7,12 +7,11 @@ import { Persona, Sexo } from './../../clases/Persona';
   styleUrls: ['./file.component.css']
 })
 export class FileComponent implements OnInit {
-  public PersonaObjeto: Persona;
+PersonaObjeto: Persona;
 
+@Input() arreglo: Persona[] = new Array();
 
   constructor() {
-
-    this.PersonaObjeto = new Persona();
 
    }
 
