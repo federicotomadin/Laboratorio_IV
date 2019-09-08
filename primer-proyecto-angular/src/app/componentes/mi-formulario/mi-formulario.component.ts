@@ -23,11 +23,11 @@ Persona: Persona = {
 };
 
   @Input() arreglo: Persona[] = new Array();
-  public mostrar:boolean;
+  public mostrar: boolean;
 
     showPueblo(event: any): void {
       this.arreglo.push(event.PersonaObjeto);
-      this.mostrar = true
+      this.mostrar = true;
 
       console.log(this.arreglo);
     }
@@ -35,6 +35,7 @@ Persona: Persona = {
 constructor() {
 
   this.PersonaObjeto = new Persona();
+  this.mostrar = true;
 
   }
 

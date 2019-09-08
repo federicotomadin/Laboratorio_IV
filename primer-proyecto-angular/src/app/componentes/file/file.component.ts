@@ -7,9 +7,8 @@ import { Persona, Sexo } from './../../clases/Persona';
   styleUrls: ['./file.component.css']
 })
 export class FileComponent implements OnInit {
-PersonaObjeto: Persona;
 
-@Input() arreglo: Persona[] = new Array();
+@Input() item: any;
 
   constructor() {
 

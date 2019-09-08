@@ -21,14 +21,18 @@
 
 <app-hijo [PersonaObjeto]="Persona" (PasameElPueblo)="showPueblo($event)"></app-hijo><br><br>
 
-<div ngIf="mostrar;" class="tabla">
+<div *ngIf="mostrar" class="tabla">
     <table border="2" style="margin:0 auto" class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Sueldo</th>
+            <th>Licencia</th>
+            <th>Edad</th>
+            <th>Fecha</th>
+        </tr>
         <tr *ngFor="let item of arreglo">
-           <app-file [arreglo]="item"></app-file>
+            <app-file [item]="item"></app-file>
         </tr>
     </table>
 </div>
-
-
-
-

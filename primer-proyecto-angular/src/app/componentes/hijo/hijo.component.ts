@@ -8,10 +8,13 @@ import { Persona } from './../../clases/Persona';
 })
 export class HijoComponent implements OnInit {
 
+  public mostrar: boolean;
+
   @Input() PersonaObjeto: Persona;
   @Output() PasameElPueblo = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
   }
