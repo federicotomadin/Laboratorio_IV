@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MiFormularioComponent } from './componentes/mi-formulario/mi-formulario.component';
 import { HijoComponent } from './componentes/hijo/hijo.component';
 import { FileComponent } from './Componentes/file/file.component';
+import { TransformPipe } from './pipes/transform.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FileComponent } from './Componentes/file/file.component';
     HomeComponent,
     MiFormularioComponent,
     HijoComponent,
-    FileComponent
+    FileComponent,
+    TransformPipe
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,7 @@ Persona: Persona = {
 
   @Input() arreglo: Persona[] = new Array();
   public mostrar: boolean;
+  public tituloColumna: boolean;
 
     showPueblo(event: any): void {
       this.arreglo.push(event.PersonaObjeto);
@@ -36,6 +37,7 @@ constructor() {
 
   this.PersonaObjeto = new Persona();
   this.mostrar = true;
+  this.tituloColumna = true;
 
   }
 

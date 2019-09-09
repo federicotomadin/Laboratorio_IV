@@ -25,12 +25,10 @@
     position: absolute;
     text-align: center;
     top: 69%;
-    left: 25%
+    left: 40%
 }
 
-
-/* .table {
-    position: absolute;
-     text-align: center; 
-    top: %;
-}  */
+th {
+    background-color: black;
+    color: white
+}

@@ -7,14 +7,14 @@
     <input type="text" [(ngModel)]="Persona.apellido" placeholder="Ingrese el apellido" id="apellido" name="apellido"><br><br>
     <input type="text" [(ngModel)]="Persona.sueldo" placeholder="Ingrese el sueldo" id="sueldo" name="sueldo"><br><br>
     <select name="licencia" id="licencia" [(ngModel)]="Persona.licencia">
-          <option selected value="true">si</option>
-          <option value="false">no</option>
+          <option selected value="si">si</option>
+          <option value="no">no</option>
         </select><br><br>
     <input type="text" [(ngModel)]="Persona.edad" placeholder="Ingrese el edad" id="edad" name="edad"><br><br>
     <select name="sexo" id="sexo" [(ngModel)]="Persona.sexo">
-          <option value=1>M</option>
-          <option value=2>F</option>
-          <option value=3>O</option>
+          <option value="1">M</option>
+          <option value="2">F</option>
+          <option value="3">O</option>
         </select><br><br>
     <input type="date" [(ngModel)]="Persona.fecha" placeholder="Ingrese la fecha" id="fecha" name="fecha"><br><br>
 </div>
@@ -22,6 +22,7 @@
 <app-hijo [PersonaObjeto]="Persona" (PasameElPueblo)="showPueblo($event)"></app-hijo><br><br>
 
 <div *ngIf="mostrar" class="tabla">
+
     <table border="2" style="margin:0 auto" class="table">
         <tr>
             <th>Nombre</th>
@@ -29,10 +30,18 @@
             <th>Sueldo</th>
             <th>Licencia</th>
             <th>Edad</th>
+            <th>Sexo</th>
             <th>Fecha</th>
         </tr>
-        <tr *ngFor="let item of arreglo">
-            <app-file [item]="item"></app-file>
+        <tr *ngFor="let item of arreglo" app-file [item]="item">
+            <!-- <app-file [item]="item"></app-file> -->
+            <!-- <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.sueldo}}</td>
+            <td>{{item.licencia}}</td>
+            <td>{{item.edad}}</td>
+            <td>{{item.sexo}}</td>
+            <td>{{item.fecha}}</td> -->
         </tr>
     </table>
 </div>
