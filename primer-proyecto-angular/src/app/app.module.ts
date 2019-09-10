@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Routes } from '@angular/router';
+import { PersonasService } from './servicios/personas.service';
 
 // import { AppComponent } from './src/componentes/home/app-home';
 
@@ -18,6 +20,12 @@ import { MiFormularioComponent } from './componentes/mi-formulario/mi-formulario
 import { HijoComponent } from './componentes/hijo/hijo.component';
 import { FileComponent } from './Componentes/file/file.component';
 import { TransformPipe } from './pipes/transform.pipe';
+
+
+const routes: Routes = [
+  { path: 'home', component: HomeComponent }
+
+];
 
 @NgModule({
   declarations: [
@@ -37,7 +45,7 @@ import { TransformPipe } from './pipes/transform.pipe';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PersonasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
