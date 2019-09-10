@@ -7,9 +7,9 @@ import { Persona, Sexo } from '../clases/persona';
 })
 export class PersonasService {
 
-  Persona: Persona;  
+  Persona: Persona;
 
-  constructor() { 
+  constructor() {
     console.log('Servicio funcionando');
   }
 
