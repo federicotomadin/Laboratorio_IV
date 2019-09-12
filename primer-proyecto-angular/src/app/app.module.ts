@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes } from '@angular/router';
+
+
 import { PersonasService } from './servicios/personas.service';
-
-// import { AppComponent } from './src/componentes/home/app-home';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/home/home.component';
@@ -20,6 +20,7 @@ import { MiFormularioComponent } from './componentes/mi-formulario/mi-formulario
 import { HijoComponent } from './componentes/hijo/hijo.component';
 import { FilaComponent } from './componentes/fila/fila.component';
 import { TransformPipe } from './pipes/transform.pipe';
+import { PaisesComponent } from './componentes/paises/paises.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
     MiFormularioComponent,
     HijoComponent,
     FilaComponent,
-    TransformPipe
+    TransformPipe,
+    PaisesComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ const routes: Routes = [
     AngularFirestoreModule,
     NgbModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [PersonasService],
   bootstrap: [AppComponent]

@@ -1,0 +1,25 @@
+
+<div class="tabla">
+<table border="2" style="margin:0 auto" class="table">
+  <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Sueldo</th>
+      <th>Licencia</th>
+      <th>Edad</th>
+      <th>Sexo</th>
+      <th>Fecha</th>
+  </tr>
+  <tr *ngFor="let item of servicio.getPaises()" app-fila [item]="item">
+      <!-- <app-file [item]="item"></app-file> -->
+      <!-- <td>{{item.nombre}}</td>
+      <td>{{item.apellido}}</td>
+      <td>{{item.sueldo}}</td>
+      <td>{{item.licencia}}</td>
+      <td>{{item.edad}}</td>
+      <td>{{item.sexo}}</td>
+      <td>{{item.fecha}}</td> -->
+  </tr>
+</table>
+
+</div>

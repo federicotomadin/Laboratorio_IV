@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Persona, Sexo } from '../clases/persona';
 import { prepareSyntheticListenerName } from '@angular/compiler/src/render3/util';
@@ -10,8 +11,19 @@ export class PersonasService {
 
   private lista: Persona;
 
-  constructor() {
-    console.log('Servicio funcionando');
+  private listaPaises;
+
+  constructor(private http: HttpClient) {
+  }
+
+  getPaises() {
+
+    this.listaPaises =  this.http.get('https://restcountries.eu/rest/v2/all');
+    this.listaPaises.subscribe(data => {
+       console.log(data);
+     });
+
+    return this.listaPaises;
   }
 
   getLista() {
