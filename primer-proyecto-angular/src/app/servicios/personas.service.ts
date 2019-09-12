@@ -19,9 +19,6 @@ export class PersonasService {
   getPaises() {
 
     this.listaPaises =  this.http.get('https://restcountries.eu/rest/v2/all');
-    this.listaPaises.subscribe(data => {
-       console.log(data);
-     });
 
     return this.listaPaises;
   }

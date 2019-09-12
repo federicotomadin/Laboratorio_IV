@@ -9,7 +9,7 @@ import { PersonasService } from 'src/app/servicios/personas.service';
 })
 export class PaisesComponent implements OnInit {
 
-listaPaises;
+listaPaises: any;
 
   constructor(private servicio: PersonasService) {
 
@@ -20,10 +20,10 @@ listaPaises;
   ngOnInit() {
 
   this.servicio.getPaises()
-  .suscribe(data => {
+  .subscribe( (data: any) => {
     this.listaPaises = data;
     console.log(data);
-  }, data => console.log(data) );
+  }, (data: any) => console.log(data) );
 
 
   }
