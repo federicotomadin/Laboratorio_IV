@@ -12,9 +12,11 @@ import { PersonasService } from '../../servicios/personas.service'
 export class MiFormularioComponent implements OnInit {
 
 public PersonaObjeto: Persona;
-public Persona: Persona;
+public Personas: Persona;
 
-// public Persona: Persona = {
+public Persona;
+
+// Persona: Persona = {
 //   nombre: 'Ignacio',
 //   apellido: 'Ramirez',
 //   sueldo: 15000,
@@ -36,10 +38,21 @@ public Persona: Persona;
       console.log(this.arreglo);
     }
 
-constructor( private _servicio: PersonasService) { 
+constructor(private _servicio: PersonasService) {
+
+  this.Persona = {
+  nombre: 'Ignacio',
+  apellido: 'Ramirez',
+  sueldo: 15000,
+  licencia: true,
+  edad: 25,
+  sexo: Sexo.hombre,
+  fecha: new Date()
+};
+
   this.PersonaObjeto = new Persona();
   this.mostrar = true;
-  this.Persona = this._servicio.getLista();
+  this.Personas = this._servicio.getLista();
 
   }
 
