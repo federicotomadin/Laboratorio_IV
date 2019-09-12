@@ -9,7 +9,7 @@ import { Persona } from './../../clases/Persona';
 export class HijoComponent implements OnInit {
 
   @Input() PersonaObjeto: Persona;
-  @Output() PasameElPueblo = new EventEmitter();
+  @Output() CargarDatosHijo = new EventEmitter();
 
   constructor() {
    }
@@ -18,7 +18,7 @@ export class HijoComponent implements OnInit {
   }
 
   lanzar(event: any) {
-    this.PasameElPueblo.emit({PersonaObjeto: this.PersonaObjeto});
+    this.CargarDatosHijo.emit({PersonaObjeto: this.PersonaObjeto});
 
 }
 }

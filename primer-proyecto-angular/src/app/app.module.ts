@@ -18,7 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MiFormularioComponent } from './componentes/mi-formulario/mi-formulario.component';
 import { HijoComponent } from './componentes/hijo/hijo.component';
-import { FileComponent } from './Componentes/file/file.component';
+import { FilaComponent } from './componentes/fila/fila.component';
 import { TransformPipe } from './pipes/transform.pipe';
 
 
@@ -33,7 +33,7 @@ const routes: Routes = [
     HomeComponent,
     MiFormularioComponent,
     HijoComponent,
-    FileComponent,
+    FilaComponent,
     TransformPipe
   ],
   imports: [

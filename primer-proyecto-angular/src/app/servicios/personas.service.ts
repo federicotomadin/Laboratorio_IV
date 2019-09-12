@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Persona, Sexo } from '../clases/persona';
+import { prepareSyntheticListenerName } from '@angular/compiler/src/render3/util';
 
 
 @Injectable({
@@ -7,21 +8,17 @@ import { Persona, Sexo } from '../clases/persona';
 })
 export class PersonasService {
 
-  Persona: Persona;
+  private lista: Persona;
 
   constructor() {
     console.log('Servicio funcionando');
   }
 
-  obtenerPersona(){
-    return  this.Persona = {
-      nombre: 'Ignacio',
-      apellido: 'Ramirez',
-      sueldo: 15000,
-      licencia: true,
-      edad: 25,
-      sexo: Sexo.hombre,
-      fecha: new Date()
-    };
+  getLista() {
+    return this.lista;
+  }
+
+  setLista(lista) {
+    this.lista = lista;
   }
 }

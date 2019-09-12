@@ -14,7 +14,7 @@ export class MiFormularioComponent implements OnInit {
 public PersonaObjeto: Persona;
 public Persona: Persona;
 
-// Persona: Persona = {
+// public Persona: Persona = {
 //   nombre: 'Ignacio',
 //   apellido: 'Ramirez',
 //   sueldo: 15000,
@@ -28,18 +28,18 @@ public Persona: Persona;
   public mostrar: boolean;
 
 
-    showPueblo(event: any): void {
+    CargarDatos(event: any): void {
       this.arreglo.push(event.PersonaObjeto);
       this.mostrar = true;
+      this._servicio.setLista(this.arreglo);
 
       console.log(this.arreglo);
     }
 
-constructor(private _servicio: PersonasService) {
-
+constructor( private _servicio: PersonasService) { 
   this.PersonaObjeto = new Persona();
   this.mostrar = true;
-  this.Persona = _servicio.obtenerPersona();
+  this.Persona = this._servicio.getLista();
 
   }
 
