@@ -21,6 +21,7 @@ import { HijoComponent } from './componentes/hijo/hijo.component';
 import { FilaComponent } from './componentes/fila/fila.component';
 import { TransformPipe } from './pipes/transform.pipe';
 import { PaisesComponent } from './componentes/paises/paises.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const routes: Routes = [
@@ -46,7 +47,8 @@ const routes: Routes = [
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [PersonasService],
   bootstrap: [AppComponent]
