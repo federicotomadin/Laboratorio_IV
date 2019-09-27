@@ -1,7 +1,8 @@
 import { Persona, Sexo } from './../../clases/Persona';
 import { Component, OnInit, Input } from '@angular/core';
 import { getLocaleDateTimeFormat } from '@angular/common';
-import { PersonasService } from '../../servicios/personas.service'
+import { PersonasService } from '../../servicios/personas.service';
+
 
 
 @Component({
@@ -16,15 +17,6 @@ public Personas: Persona;
 
 public Persona;
 
-// Persona: Persona = {
-//   nombre: 'Ignacio',
-//   apellido: 'Ramirez',
-//   sueldo: 15000,
-//   licencia: true,
-//   edad: 25,
-//   sexo: Sexo.hombre,
-//   fecha: new Date()
-// };
 
   @Input() arreglo: Persona[] = new Array();
   public mostrar: boolean;
@@ -40,19 +32,19 @@ public Persona;
 
 constructor(private _servicio: PersonasService) {
 
-  this.Persona = {
-  nombre: 'Ignacio',
-  apellido: 'Ramirez',
-  sueldo: 15000,
-  licencia: true,
-  edad: 25,
-  sexo: Sexo.hombre,
-  fecha: new Date()
-};
+//   this.Persona = {
+//   nombre: 'Ignacio',
+//   apellido: 'Ramirez',
+//   sueldo: 15000,
+//   licencia: true,
+//   edad: 25,
+//   sexo: Sexo.hombre,
+//   fecha: new Date()
+// };
 
   this.PersonaObjeto = new Persona();
   this.mostrar = true;
-  this.Personas = this._servicio.getLista();
+  this.Persona = this._servicio.getPersonas();
 
   }
 
